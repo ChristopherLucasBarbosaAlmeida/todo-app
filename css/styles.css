@@ -1,0 +1,462 @@
+@import url("https://fonts.googleapis.com/css2?family=Bai+Jamjuree&family=Barlow+Semi+Condensed:wght@400;500&family=DM+Sans:opsz@9..40&family=Hanken+Grotesk&family=Inter:wght@300;400&family=Josefin+Sans&family=Karla:ital@0;1&family=Kumbh+Sans&family=Open+Sans&family=Overpass&family=Poppins&family=Raleway&family=Rubik:wght@300;400&family=Space+Grotesk:wght@500&family=Space+Mono:wght@700&display=swap");
+html {
+  line-height: 1.15;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+}
+
+main {
+  display: block;
+}
+
+h1 {
+  font-size: 2em;
+  margin: 0 0;
+}
+
+hr {
+  box-sizing: content-box;
+  height: 0;
+  overflow: visible;
+}
+
+pre {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+a {
+  background-color: transparent;
+}
+
+abbr[title] {
+  border-bottom: none;
+  text-decoration: underline;
+  text-decoration: underline dotted;
+}
+
+b,
+strong {
+  font-weight: bolder;
+}
+
+code,
+kbd,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+small {
+  font-size: 80%;
+}
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+img {
+  border-style: none;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+}
+
+button,
+input {
+  overflow: visible;
+}
+
+button,
+select {
+  text-transform: none;
+}
+
+button,
+[type=button],
+[type=reset],
+[type=submit] {
+  -webkit-appearance: button;
+}
+
+button::-moz-focus-inner,
+[type=button]::-moz-focus-inner,
+[type=reset]::-moz-focus-inner,
+[type=submit]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+button:-moz-focusring,
+[type=button]:-moz-focusring,
+[type=reset]:-moz-focusring,
+[type=submit]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+fieldset {
+  padding: 0.35em 0.75em 0.625em;
+}
+
+legend {
+  box-sizing: border-box;
+  color: inherit;
+  display: table;
+  max-width: 100%;
+  padding: 0;
+  white-space: normal;
+}
+
+progress {
+  vertical-align: baseline;
+}
+
+textarea {
+  overflow: auto;
+}
+
+[type=checkbox],
+[type=radio] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+[type=number]::-webkit-inner-spin-button,
+[type=number]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+[type=search] {
+  -webkit-appearance: textfield;
+  outline-offset: -2px;
+}
+
+[type=search]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  font: inherit;
+}
+
+details {
+  display: block;
+}
+
+summary {
+  display: list-item;
+}
+
+template {
+  display: none;
+}
+
+[hidden] {
+  display: none;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Josefin Sans", sans-serif;
+  background: url("/images/bg-desktop-dark.jpg") top left/100% no-repeat;
+  background-color: hsl(235, 21%, 11%);
+}
+
+.footer a {
+  color: hsl(234, 11%, 52%);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 250ms ease-out;
+}
+.footer a:hover {
+  color: hsl(234, 39%, 85%);
+}
+.footer a:focus {
+  color: hsl(220, 98%, 61%);
+}
+
+main {
+  width: 30%;
+}
+
+.wrapper {
+  margin-bottom: 1.8rem;
+}
+.wrapper div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2.4rem;
+}
+.wrapper div h1 {
+  color: hsl(0, 0%, 98%);
+  letter-spacing: 0.4em;
+}
+.wrapper div img {
+  cursor: pointer;
+}
+.wrapper form {
+  background-color: hsl(235, 24%, 19%);
+  padding: 1.4rem;
+  display: flex;
+  gap: 1.4rem;
+  border-radius: 5px;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.5019607843);
+}
+.wrapper form input[type=text] {
+  width: 100%;
+  color: hsl(234, 39%, 85%);
+  outline: none;
+  border: none;
+  background-color: transparent;
+}
+.wrapper form input[type=text]::placeholder {
+  color: hsl(234, 11%, 52%);
+  font-size: 1.2em;
+  transition: color 250ms ease-out;
+}
+.wrapper form input[type=text]:focus::placeholder {
+  color: hsl(234, 39%, 85%);
+}
+
+ul {
+  padding: 0;
+  list-style: none;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.5019607843);
+  max-height: 495px;
+  overflow-y: auto;
+}
+
+.todo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.4rem;
+  cursor: pointer;
+  user-select: none;
+  background-color: hsl(235, 24%, 19%);
+  border-bottom: 1px solid hsl(237, 14%, 26%);
+}
+.todo div {
+  display: flex;
+  align-items: center;
+  gap: 1.4rem;
+}
+.todo img {
+  opacity: 0;
+}
+.todo:hover img {
+  transition: opacity 250ms ease-out;
+  opacity: 1;
+}
+.todo:nth-child(1) {
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+.todo p {
+  color: hsl(234, 39%, 85%);
+  font-size: 1.2em;
+  margin: 0;
+}
+.todo--done p {
+  color: hsl(234, 11%, 52%);
+  text-decoration: line-through;
+}
+
+.checkbox {
+  -webkit-appearance: none;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  border: 1px solid hsl(234, 11%, 52%);
+  cursor: pointer;
+  position: relative;
+}
+.checkbox:hover {
+  border: none;
+  background: linear-gradient(to right, hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+}
+.checkbox:hover::after {
+  content: "";
+  width: 23px;
+  height: 23px;
+  border-radius: 50%;
+  background-color: hsl(235, 24%, 19%);
+  position: absolute;
+  top: 1px;
+  left: 1px;
+}
+.checkbox:hover::after {
+  content: "";
+  width: 23px;
+  height: 23px;
+  border-radius: 50%;
+  background-color: hsl(235, 24%, 19%);
+  position: absolute;
+  top: 1px;
+  left: 1px;
+}
+.checkbox:checked {
+  border: none;
+  background: linear-gradient(to right, hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+}
+
+.footer {
+  margin-top: -16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: hsl(235, 24%, 19%);
+  padding: 1.4rem;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.5019607843);
+}
+.footer p {
+  color: hsl(234, 11%, 52%);
+  margin: 0;
+}
+.footer div {
+  display: flex;
+  gap: 1rem;
+}
+
+.filter {
+  display: none;
+}
+
+@media (max-width: 1440px) {
+  main {
+    width: 40%;
+  }
+}
+@media (max-width: 1024px) {
+  main {
+    width: 55%;
+  }
+}
+@media (max-width: 768px) {
+  body {
+    background: url("../images/bg-mobile-dark.jpg") top left/100% no-repeat;
+    background-color: hsl(235, 21%, 11%);
+  }
+  main {
+    width: 60%;
+  }
+  .todo p {
+    font-size: 1em;
+  }
+  .checkbox {
+    width: 22px;
+    height: 22px;
+  }
+  .checkbox:hover::after {
+    width: 20px;
+    height: 20px;
+  }
+  .footer div {
+    display: none;
+  }
+  .filter {
+    display: block;
+    background-color: hsl(235, 24%, 19%);
+    padding: 1.4rem;
+    border-radius: 5px;
+    text-align: center;
+    margin-top: 1.8rem;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.5019607843);
+  }
+  .filter a {
+    text-decoration: none;
+    font-size: 1.2em;
+    font-weight: 600;
+    color: hsl(234, 11%, 52%);
+    margin-right: 1.4rem;
+  }
+  .filter a:hover {
+    color: hsl(234, 39%, 85%);
+  }
+  .filter a:focus {
+    color: hsl(220, 98%, 61%);
+  }
+}
+@media (max-width: 425px) {
+  body {
+    background: url("../images/bg-mobile-dark.jpg") top left/no-repeat;
+    background-color: hsl(235, 21%, 11%);
+  }
+  main {
+    width: 85%;
+  }
+  .wrapper {
+    margin-bottom: 1.2rem;
+  }
+  .wrapper form {
+    padding: 1rem;
+    gap: 1rem;
+    box-shadow: none;
+  }
+  .wrapper form input[type=text] {
+    font-size: 0.8em;
+  }
+  .todo {
+    padding: 1rem;
+    gap: 1rem;
+  }
+  .todo p {
+    font-size: 0.8em;
+  }
+  .footer {
+    padding: 1rem;
+  }
+  .footer p, .footer a {
+    font-size: 0.8em;
+  }
+  .filter {
+    padding: 1rem;
+    margin-top: 1.2rem;
+  }
+  .filter a {
+    font-size: 1em;
+  }
+}
+@media (max-width: 375px) {
+  body {
+    background: url("../images/bg-mobile-dark.jpg") top left/100% no-repeat;
+    background-color: hsl(235, 21%, 11%);
+  }
+  main {
+    width: 90%;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */

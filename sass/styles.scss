@@ -1,0 +1,334 @@
+@use './reset';
+@use './base' as *;
+@import url("https://fonts.googleapis.com/css2?family=Bai+Jamjuree&family=Barlow+Semi+Condensed:wght@400;500&family=DM+Sans:opsz@9..40&family=Hanken+Grotesk&family=Inter:wght@300;400&family=Josefin+Sans&family=Karla:ital@0;1&family=Kumbh+Sans&family=Open+Sans&family=Overpass&family=Poppins&family=Raleway&family=Rubik:wght@300;400&family=Space+Grotesk:wght@500&family=Space+Mono:wght@700&display=swap");
+
+body {
+  height: 100vh;
+  @include flex(center);
+  font-family: 'Josefin Sans', sans-serif;
+  background: url("/images/bg-desktop-dark.jpg") top left / 100% no-repeat;
+  background-color: $very-dark-blue;
+}
+
+%active__links {
+  color: $dark-grayish-blue;
+  text-decoration: none;
+  font-weight: 600;
+  @include transition(color);
+
+  &:hover {
+    color: $light-grayish-blue;
+  }
+
+  &:focus {
+    color: $bright-blue;
+  }
+}
+
+main {
+  width: 30%;
+}
+
+.wrapper {
+  margin-bottom: 1.8rem;
+
+  div {
+    @include flex(space-between);
+    margin-bottom: 2.4rem;
+
+    h1 {
+      color: $very-light-gray;
+      letter-spacing: .4em;
+    }
+
+    img {
+      cursor: pointer;
+    }
+  }
+
+  form {
+    background-color: $very-dark-desaturated-blue;
+    padding: 1.4rem;
+    display: flex;
+    gap: 1.4rem;
+    border-radius: 5px;
+    box-shadow: $shadow;
+  
+    input[type=text]{
+      width: 100%;
+      color: $light-grayish-blue;
+      outline: none;
+      border: none;
+      background-color: transparent;
+
+      &::placeholder {
+        color: $dark-grayish-blue;
+        font-size: 1.2em;
+        @include transition(color);
+      }
+
+      &:focus::placeholder {
+        color: $light-grayish-blue;
+      }
+    }
+  }
+}
+
+ul {
+  padding: 0;
+  list-style: none;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  box-shadow: $shadow;
+  max-height: 495px;
+  overflow-y: auto;
+}
+
+.todo {
+  @include flex(space-between);
+  padding: 1.4rem;
+  cursor: pointer;
+  user-select: none;
+  background-color: $very-dark-desaturated-blue;
+  border-bottom: 1px solid $very-dark-grayish-blue;
+
+  div {
+    display: flex;
+    align-items: center;
+    gap: 1.4rem;
+  }
+
+  img {
+    opacity: 0;    
+  }
+
+  &:hover {
+    img {
+      @include transition(opacity);
+      opacity: 1;
+    }
+  }
+  
+  &:nth-child(1) {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+  }
+  
+  p {
+    color: $light-grayish-blue;
+    font-size: 1.2em;
+    margin: 0;
+  }  
+
+  &--done {
+    p {
+      color: $dark-grayish-blue;
+      text-decoration: line-through;
+    }
+  } 
+}
+
+.checkbox {
+  -webkit-appearance: none;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  border: 1px solid $dark-grayish-blue;
+  cursor: pointer;
+  position: relative;
+
+  &:hover {
+    border: none;
+    background: $check-background;
+  }
+
+  &:hover::after {
+    content: "";
+    width: 23px;
+    height: 23px;
+    border-radius: 50%;
+    background-color: $very-dark-desaturated-blue;
+    position: absolute;
+    top: 1px;
+    left: 1px;
+  }
+
+  &:hover::after {
+    content: "";
+    width: 23px;
+    height: 23px;
+    border-radius: 50%;
+    background-color: $very-dark-desaturated-blue;
+    position: absolute;
+    top: 1px;
+    left: 1px;
+  }
+
+  &:checked {
+    border: none;
+    background: $check-background;
+  }
+}
+
+.footer {
+  margin-top: -16px;
+  @include flex(space-between);
+  background-color: $very-dark-desaturated-blue;
+  padding: 1.4rem;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  box-shadow: $shadow;
+
+  p {
+    color: $dark-grayish-blue;
+    margin: 0;
+  }
+
+  a {
+   @extend %active__links;
+  }
+  
+  div {
+    display: flex;
+    gap: 1rem;
+  }
+}
+
+.filter {
+  display: none;
+}
+
+
+@media (max-width: 1440px) {
+  main {
+    width: 40%;
+  }
+}
+
+@media (max-width: 1024px) {
+  main {
+    width: 55%;
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    background: url("../images/bg-mobile-dark.jpg") top left / 100% no-repeat;
+    background-color: $very-dark-blue;
+  }
+
+  main {
+    width: 60%;
+  }
+
+  .todo {
+    p {
+      font-size: 1em;
+    }
+  }
+
+  .checkbox {
+    width: 22px;
+    height: 22px;
+
+    &:hover::after {
+      width: 20px;
+      height: 20px;
+    }
+  }
+
+  .footer {
+    div {
+      display: none;
+    }
+  }
+  
+  .filter {
+    display: block;
+    background-color: $very-dark-desaturated-blue;
+    padding: 1.4rem;
+    border-radius: 5px;
+    text-align: center;
+    margin-top: 1.8rem;
+    box-shadow: $shadow;
+
+    a {
+      text-decoration: none;
+      font-size: 1.2em;
+      font-weight: 600;
+      color: $dark-grayish-blue;
+      margin-right: 1.4rem;
+
+      &:hover {
+        color: $light-grayish-blue;        
+      }
+
+      &:focus {
+        color: $bright-blue;
+      }
+    }
+  }
+}
+
+@media (max-width: 425px) {
+  body {
+    background: url("../images/bg-mobile-dark.jpg") top left / no-repeat;
+    background-color: $very-dark-blue;;
+  }
+
+  main {
+    width: 85%;
+  }
+
+  .wrapper {
+    margin-bottom: 1.2rem;
+
+    form {
+      padding: 1rem;
+      gap: 1rem;
+      box-shadow: none;
+  
+      input[type=text] {
+        font-size: .8em;
+      }
+    }
+
+  }
+
+  .todo {
+    padding: 1rem;
+    gap: 1rem;
+
+    p {
+      font-size: .8em;
+    }
+  }
+
+  .footer {
+    padding: 1rem;
+
+    p, a {
+      font-size: .8em;
+    }
+  }
+
+  .filter {
+    padding: 1rem;
+    margin-top: 1.2rem;
+
+    a {
+      font-size: 1em;
+    }
+  }
+}
+
+@media (max-width: 375px) {
+  body {
+    background: url("../images/bg-mobile-dark.jpg") top left / 100% no-repeat;
+    background-color: $very-dark-blue;;
+  }
+
+  main {
+    width: 90%;
+  }
+}
